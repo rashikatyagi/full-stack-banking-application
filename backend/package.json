@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
+  "keywords": [],
+  "author": "Rashika Tyagi",
+  "license": "ISC",
+  "description": "An AI-driven customer support comprised full-stack banking application with essential features, such as user authentication (JWT), RESTful APIs, transaction management, and real-time email alerts.",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.0",
+    "nodemon": "^3.1.10"
+  }
+}
