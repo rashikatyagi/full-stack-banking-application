@@ -34,6 +34,8 @@ const userSchema = new Schema({
     ]
 }, {timestamps : true})
 
+
+// password encryption using bcrypt
 userSchema.pre("save", async function(next){
     if(!this.isModified("password")) return next();
 
@@ -44,5 +46,6 @@ userSchema.pre("save", async function(next){
 userSchema.methods.isPasswordCorrect = async function (password) {
     return await bcrypt.compare(this.password, password);
 }
+
 
 export const User = mongoose.model('User', userSchema)
